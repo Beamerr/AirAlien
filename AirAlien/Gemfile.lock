@@ -74,6 +74,7 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     gravatarify (3.0.0)
@@ -222,6 +223,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass
+  geocoder
   gravatarify (~> 3.0.0)
   jbuilder (~> 2.5)
   jquery-rails
