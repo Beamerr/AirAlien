@@ -16,4 +16,12 @@ class Room < ApplicationRecord
   validates :address, presence: true
   validates :price, presence: true
 
+  def show_first_photo
+    if self.photos.length == 0
+      'http://placehold.it/350x150'
+    else
+      self.photos[0].image.url
+    end
+  end
+
 end
