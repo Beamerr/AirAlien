@@ -220,7 +220,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .text-line-through {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
 .reservation-table td {
@@ -239,4 +239,13 @@ input[type="checkbox"]:checked:before {
   font-size: 20px;
   padding: 10px; 
   margin-bottom: 10px;
+}
+
+.conversation {
+  color: #7f7f7f;
+  padding: 10px;
+}
+
+.conversation:hover, .conversation:focus {
+  background-color: #F4F4F5;
 }
