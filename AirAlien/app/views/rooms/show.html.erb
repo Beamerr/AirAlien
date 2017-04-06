@@ -136,6 +136,22 @@
 		<br>
 		<hr>
 
+		<!-- Reviews -->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Reviews <%= @room.average_rating %> (<%= @reviews.count unless @reviews.nil? %>)</h3>
+				<div class="container">
+					<div>
+						<%= render 'reviews/form' if @booked && !@hasReview %>
+					</div>
+					<div>
+						<%= render 'reviews/list' %> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+
 		<!-- Google Map -->
 		<div class="row">
 			<div class="col-md-12">
@@ -151,15 +167,15 @@
 
 				<script>
 					function initMap() {
-					var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
-					var map = new google.maps.Map(document.getElementById('map'), {
-					  zoom: 15,
-					  center: uluru
-					});
-					var marker = new google.maps.Marker({
-					  position: uluru,
-					  map: map
-					});
+						var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
+						var map = new google.maps.Map(document.getElementById('map'), {
+						  zoom: 15,
+						  center: uluru
+						});
+						var marker = new google.maps.Marker({
+						  position: uluru,
+						  map: map
+						});
 					}
     			</script>
     			<script async defer
