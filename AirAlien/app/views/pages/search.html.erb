@@ -1,3 +1,5 @@
+<br>
+
 <div id="wrapper">
 	
 	<div id="sidebar">
@@ -28,7 +30,7 @@
 
 						<% @arrRooms.each do |room| %>
 							var marker = new google.maps.Marker({
-							  position: uluru,
+							  position: new google.maps.LatLng(<%= room.latitude %>, <%= room.longitude %>),
 							  map: map
 							});
 
@@ -41,11 +43,9 @@
 					<% end %>
 
 				}
-				
 						
     			</script>
-
-	    			
+    			
 		</div>
 	</div>
 
@@ -137,7 +137,9 @@
 
 					<br>
 
-					<div class="row">
+					<br>
+
+					<div class="row" style="margin-left: 0px">
 						<%= f.submit "Search", class: "btn btn-primary" %>
 					</div>
 

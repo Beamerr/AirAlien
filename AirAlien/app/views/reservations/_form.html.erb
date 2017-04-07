@@ -1,13 +1,11 @@
 <%= form_for([@room, @room.reservations.new]) do |f| %>
 	
 	<div class="row" style="text-align: center;">
-		<div class="col-md-12 price_tag">
+		<div class="col-md-12 price_tag" style="margin-top: -10px;">
 			<span>$<%= @room.price %> </span>
 			<span>Per Night</span>
 		</div>
 	</div>
-
-	<hr>
 
 	<% if current_user != @room.user %>
 

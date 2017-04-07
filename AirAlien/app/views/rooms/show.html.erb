@@ -75,10 +75,12 @@
 			</div>
 		</div>
 
+		<br>
+
 		<!-- Amenities -->
 		<div class="row">
 			<div class="col-md-2">
-				<p>Amentities</p>
+				<h4 style="margin-top: -2px;">Amentities</h4>
 			</div>
 			<div class="col-md-10">
 				<div class="row">
@@ -90,8 +92,10 @@
 						</ul>
 					</div>
 					<div class="col-md-6">
+						<ul class="amenities">
 						<li class="<%= 'text-line-through' if !@room.is_heating %>">Heating</li>
 						<li class="<%= 'text-line-through' if !@room.is_air %>">Air Conditioning</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -188,7 +192,7 @@
 		<!-- Close by rooms -->
 		<h3>Near bys</h3>
 		<div class="row">
-			<% for room in @room.nearbys(10) %>
+			<% for room in @room.nearbys(3) %>
 
 				<div class="col-md-4">
 					<div class="panel panel-default">
@@ -197,7 +201,7 @@
 						</div>
 						<div class="panel-body">
 							<%= link_to room.listing_name, room %><br>
-							(<%= room.distance.round(2) %> miles away)
+							(<%= room.distance.round(1) %> miles away)
 						</div>
 					</div>
 				</div>
